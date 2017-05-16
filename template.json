@@ -22,7 +22,8 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "provision.sh"
+      "script": "provision.sh",
+      "execute_command": "echo '' | {{.Vars}} sudo -E -S sh '{{.Path}}'"
     }
   ]
 }
